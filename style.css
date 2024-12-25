@@ -1,32 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
-
-.container {
-  max-width: 600px;
-  margin: auto;
-}
-
 textarea {
   height: 100%;
   resize: both;
-}
-
-input, button {
-  width: 100%;
-  margin: 5px 0;
-  padding: 10px;
-  font-size: 16px;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
