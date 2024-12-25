@@ -40,14 +40,14 @@ function isValidPhoneNumber(phoneNumber) {
 
 function sendMessage() {
   const chatId = document.getElementById("chatIdSendMessage").value;
-  const chatIdError = document.getElementById("chatIdError");
+  const chatIdError = document.getElementById("chatIdSendMessageError");
   const textMessage = document.getElementById("textmessage").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdSendMessageError.style.display = "block";
+    chatIdError.style.display = "block";
     return;
   } else {
-    chatIdSendMessageError.style.display = "none";
+    chatIdError.style.display = "none";
   }
   
   if (!textMessage) {
@@ -64,13 +64,14 @@ function sendMessage() {
 
 function sendFileByUrl() {
   const chatId = document.getElementById("chatIdSendFile").value;
+  const chatIdError = document.getElementById("chatIdSendFileError");
   const urlFile = document.getElementById("fileUrl").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdSendFileError.style.display = "block";
+    chatIdError.style.display = "block";
     return;
   } else {
-    chatIdSendFileError.style.display = "none";
+    chatIdError.style.display = "none";
   }
   
   if (!urlFile) {
