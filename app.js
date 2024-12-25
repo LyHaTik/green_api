@@ -42,16 +42,19 @@ function sendMessage() {
   const chatId = document.getElementById("chatId").value;
   const chatIdError = document.getElementById("chatIdError");
   const textMessage = document.getElementById("textmessage").value;
+  
   if (!isValidPhoneNumber(chatId)) {
     chatIdError.style.display = "block";
     return;
   } else {
     chatIdError.style.display = "none";
   }
+  
   if (!textMessage) {
     alert("Введите сообщение!");
     return;
   }
+  
   const body = {
     chatId: `${chatId}@c.us`,
     message: textMessage,
@@ -62,21 +65,21 @@ function sendMessage() {
 function sendFileByUrl() {
   const chatId = document.getElementById("chatId").value;
   const urlFile = document.getElementById("fileUrl").value;
+  
   if (!isValidPhoneNumber(chatId)) {
     chatIdError.style.display = "block";
     return;
   } else {
     chatIdError.style.display = "none";
   }
+  
   if (!urlFile) {
     alert("Добавьте ссылку!");
     return;
   }
+  
   const fileName = urlFile.split('/').pop();
-  if (!fileName) {
-    alert("Не корректная ссылка, рекомендуется использовать хост mediaUrl из личного кабинета!");
-    return;
-  }
+
   const body = {
     chatId: `${chatId}@c.us`,
     urlFile,
