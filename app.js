@@ -45,7 +45,7 @@ function sendMessage() {
     return;
   }
   const body = {
-    chatId,
+    chatId: `${chatId}@c.us`,
     message: textMessage,
   };
   callApi("sendMessage", "POST", body);
