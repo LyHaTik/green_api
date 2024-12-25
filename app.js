@@ -40,14 +40,11 @@ function isValidPhoneNumber(phoneNumber) {
 
 function sendMessage() {
   const chatId = document.getElementById("chatIdSendMessage").value;
-  const chatIdError = document.getElementById("chatIdSendMessageError");
   const textMessage = document.getElementById("textmessage").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdError.style.display = "block";
+    alert("Не верный номер!");
     return;
-  } else {
-    chatIdError.style.display = "none";
   }
   
   if (!textMessage) {
@@ -64,14 +61,11 @@ function sendMessage() {
 
 function sendFileByUrl() {
   const chatId = document.getElementById("chatIdSendFile").value;
-  const chatIdError = document.getElementById("chatIdSendFileError");
   const urlFile = document.getElementById("fileUrl").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdError.style.display = "block";
+    alert("Не верный номер!");
     return;
-  } else {
-    chatIdError.style.display = "none";
   }
   
   if (!urlFile) {
