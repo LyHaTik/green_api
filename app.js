@@ -35,13 +35,18 @@ function getStateInstance() {
 
 function sendMessage() {
   const chatId = document.getElementById("chatId").value;
+  const textMessage = document.getElementById("textmessage").value;
   if (!chatId) {
     alert("Please provide Chat ID!");
     return;
   }
+  if (!textMessage) {
+    alert("Введите сообщение!");
+    return;
+  }
   const body = {
     chatId,
-    message: "Hello from GREEN-API!",
+    textMessage,
   };
   callApi("sendMessage", "POST", body);
 }
@@ -51,6 +56,10 @@ function sendFileByUrl() {
   const urlFile = document.getElementById("fileUrl").value;
   if (!chatId || !urlFile) {
     alert("Please provide Chat ID and File URL!");
+    return;
+  }
+  if (!urlFile) {
+    alert("Добавьте ссылку!");
     return;
   }
   const body = {
