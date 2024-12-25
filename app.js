@@ -44,10 +44,10 @@ function sendMessage() {
   const textMessage = document.getElementById("textmessage").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdError.style.display = "block";
+    chatIdSendMessageError.style.display = "block";
     return;
   } else {
-    chatIdError.style.display = "none";
+    chatIdSendMessageError.style.display = "none";
   }
   
   if (!textMessage) {
@@ -67,10 +67,10 @@ function sendFileByUrl() {
   const urlFile = document.getElementById("fileUrl").value;
   
   if (!isValidPhoneNumber(chatId)) {
-    chatIdError.style.display = "block";
+    chatIdSendFileError.style.display = "block";
     return;
   } else {
-    chatIdError.style.display = "none";
+    chatIdSendFileError.style.display = "none";
   }
   
   if (!urlFile) {
