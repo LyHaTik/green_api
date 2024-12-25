@@ -34,17 +34,28 @@ function getStateInstance() {
 }
 
 function sendMessage() {
+  const chatId = document.getElementById("chatId").value;
+  if (!chatId) {
+    alert("Please provide Chat ID!");
+    return;
+  }
   const body = {
-    chatId: "79268205228@c.us", // Replace with the actual chat ID
+    chatId,
     message: "Hello from GREEN-API!",
   };
   callApi("sendMessage", "POST", body);
 }
 
 function sendFileByUrl() {
+  const chatId = document.getElementById("chatId").value;
+  const urlFile = document.getElementById("fileUrl").value;
+  if (!chatId || !urlFile) {
+    alert("Please provide Chat ID and File URL!");
+    return;
+  }
   const body = {
-    chatId: "79268205228@c.us", // Replace with the actual chat ID
-    urlFile: "https://example.com/file.pdf", // Replace with the file URL
+    chatId,
+    urlFile,
     fileName: "file.pdf",
     caption: "Check out this file!",
   };
