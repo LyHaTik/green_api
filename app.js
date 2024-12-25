@@ -35,7 +35,7 @@ function getStateInstance() {
 
 function sendMessage() {
   const body = {
-    chatId: "79001234567@c.us", // Replace with the actual chat ID
+    chatId: "79268205228@c.us", // Replace with the actual chat ID
     message: "Hello from GREEN-API!",
   };
   callApi("sendMessage", "POST", body);
