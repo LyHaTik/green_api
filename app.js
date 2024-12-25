@@ -48,10 +48,6 @@ function sendMessage() {
   } else {
     chatIdError.style.display = "none";
   }
-  if (!chatId) {
-    alert("Введите номер телефона!");
-    return;
-  }
   if (!textMessage) {
     alert("Введите сообщение!");
     return;
@@ -71,10 +67,6 @@ function sendFileByUrl() {
     return;
   } else {
     chatIdError.style.display = "none";
-  }
-  if (!chatId || !urlFile) {
-    alert("Введите номер телефона!");
-    return;
   }
   if (!urlFile) {
     alert("Добавьте ссылку!");
