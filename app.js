@@ -5,7 +5,7 @@ async function callApi(endpoint, method = "GET", body = null) {
   const apiToken = document.getElementById("apiToken").value;
 
   if (!idInstance || !apiToken) {
-    alert("Please provide idInstance and ApiTokenInstance!");
+    alert("Введите idInstance и ApiTokenInstance!");
     return;
   }
 
@@ -63,10 +63,9 @@ function sendFileByUrl() {
     return;
   }
   const body = {
-    chatId,
+    chatId: `${chatId}@c.us`,
     urlFile,
     fileName: "file.pdf",
-    caption: "Check out this file!",
   };
   callApi("sendFileByUrl", "POST", body);
 }
