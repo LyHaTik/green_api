@@ -22,7 +22,7 @@
     <div>
       <label for="chatIdSendMessage">Номер телефона:</label>
       <input type="text" id="chatIdSendMessage" placeholder="Введите номер телефона (e.g., 79001234567)">
-      <span id="chatIdError" style="color: red; display: none;">Не верный формат номера!</span>
+      <span id="chatIdSendMessageError" style="color: red; display: none;">Не верный формат номера!</span>
       <label for="textmessage">Текст сообщения:</label>
       <input type="text" id="textmessage" placeholder="Введите текст сообщения">
       <button onclick="sendMessage()">Send Message</button>
@@ -30,6 +30,7 @@
     <div>
       <label for="chatIdSendFile">Номер телефона:</label>
       <input type="text" id="chatIdSendFile" placeholder="Введите номер телефона (e.g., 79001234567)">
+      <span id="chatIdSendFileError" style="color: red; display: none;">Не верный формат номера!</span>
       <label for="fileUrl">File URL:</label>
       <input type="text" id="fileUrl" placeholder="Введите URL">
       <button onclick="sendFileByUrl()">Send File By URL</button>
