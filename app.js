@@ -46,7 +46,7 @@ function sendMessage() {
   }
   const body = {
     chatId,
-    textMessage,
+    message: textMessage,
   };
   callApi("sendMessage", "POST", body);
 }
