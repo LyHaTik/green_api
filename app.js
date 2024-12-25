@@ -33,9 +33,21 @@ function getStateInstance() {
   callApi("getStateInstance");
 }
 
+function isValidPhoneNumber(phoneNumber) {
+  const phoneRegex = /^\d{10,15}$/;
+  return phoneRegex.test(phoneNumber);
+}
+
 function sendMessage() {
   const chatId = document.getElementById("chatId").value;
+  const chatIdError = document.getElementById("chatIdError");
   const textMessage = document.getElementById("textmessage").value;
+  if (!isValidPhoneNumber(chatId)) {
+    chatIdError.style.display = "block";
+    return;
+  } else {
+    chatIdError.style.display = "none";
+  }
   if (!chatId) {
     alert("Введите номер телефона!");
     return;
@@ -54,6 +66,12 @@ function sendMessage() {
 function sendFileByUrl() {
   const chatId = document.getElementById("chatId").value;
   const urlFile = document.getElementById("fileUrl").value;
+  if (!isValidPhoneNumber(chatId)) {
+    chatIdError.style.display = "block";
+    return;
+  } else {
+    chatIdError.style.display = "none";
+  }
   if (!chatId || !urlFile) {
     alert("Введите номер телефона!");
     return;
