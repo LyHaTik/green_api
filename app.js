@@ -43,7 +43,7 @@ function sendMessage() {
 
 function sendFileByUrl() {
   const body = {
-    chatId: "79001234567@c.us", // Replace with the actual chat ID
+    chatId: "79268205228@c.us", // Replace with the actual chat ID
     urlFile: "https://example.com/file.pdf", // Replace with the file URL
     fileName: "file.pdf",
     caption: "Check out this file!",
