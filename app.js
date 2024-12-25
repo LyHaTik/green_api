@@ -39,7 +39,7 @@ function isValidPhoneNumber(phoneNumber) {
 }
 
 function sendMessage() {
-  const chatId = document.getElementById("chatId").value;
+  const chatId = document.getElementById("chatIdSendMessage").value;
   const chatIdError = document.getElementById("chatIdError");
   const textMessage = document.getElementById("textmessage").value;
   
@@ -63,7 +63,7 @@ function sendMessage() {
 }
 
 function sendFileByUrl() {
-  const chatId = document.getElementById("chatId").value;
+  const chatId = document.getElementById("chatIdSendFile").value;
   const urlFile = document.getElementById("fileUrl").value;
   
   if (!isValidPhoneNumber(chatId)) {
