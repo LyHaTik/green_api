@@ -55,7 +55,7 @@ function sendFileByUrl() {
   const chatId = document.getElementById("chatId").value;
   const urlFile = document.getElementById("fileUrl").value;
   if (!chatId || !urlFile) {
-    alert("Please provide Chat ID and File URL!");
+    alert("Please provide Chat ID!");
     return;
   }
   if (!urlFile) {
