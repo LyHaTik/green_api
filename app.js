@@ -72,10 +72,15 @@ function sendFileByUrl() {
     alert("Добавьте ссылку!");
     return;
   }
+  const fileName = urlFile.split('/').pop();
+  if (!fileName) {
+    alert("Не корректная ссылка, рекомендуется использовать хост mediaUrl из личного кабинета!");
+    return;
+  }
   const body = {
     chatId: `${chatId}@c.us`,
     urlFile,
-    fileName: "file.pdf",
+    fileName,
   };
   callApi("sendFileByUrl", "POST", body);
 }
