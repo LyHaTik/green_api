@@ -37,7 +37,7 @@ function sendMessage() {
   const chatId = document.getElementById("chatId").value;
   const textMessage = document.getElementById("textmessage").value;
   if (!chatId) {
-    alert("Please provide Chat ID!");
+    alert("Введите номер телефона!");
     return;
   }
   if (!textMessage) {
@@ -55,7 +55,7 @@ function sendFileByUrl() {
   const chatId = document.getElementById("chatId").value;
   const urlFile = document.getElementById("fileUrl").value;
   if (!chatId || !urlFile) {
-    alert("Please provide Chat ID!");
+    alert("Введите номер телефона!");
     return;
   }
   if (!urlFile) {
